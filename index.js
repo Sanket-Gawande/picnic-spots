@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 require('dotenv').config()
 
-const api = require('./api')
+const api = require('./sign')
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json())
 app.use('/api' , api)
