@@ -1,5 +1,6 @@
 const express = require('express')
 const router = express.Router()
+const mysqli = require("../database/connection")
 
 router
     .post('/addplace' , (req ,res) => {
