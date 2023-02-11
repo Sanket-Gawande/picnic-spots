@@ -1,0 +1,179 @@
+.main {
+    width: 80%;
+    height: 600px;
+    margin: 50px auto;
+    border-radius: 5px;
+    min-width: 400px;
+    max-width: 900px;
+    
+    background: white;
+    display: flex;
+    align-items: center;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, .1), 0 0 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+
+    & aside {
+        width: 200px;
+        height: 100%;
+        background: #eee;
+
+        & ul {
+            list-style: none;
+            width: 100%;
+
+            & .tabitem {
+                margin: 0;
+                padding: 15px 20px;
+                cursor: pointer;
+                font-weight: 700;
+                
+                border-bottom: 1px solid #ccc;
+                color: #555;
+
+            }
+            & .active{
+                background: white;
+            }
+            & .logo {
+                color: #fbb40c;
+                font-size: 1.5rem;
+                margin: 25px 0 40px;
+                border: none;
+                text-align: center;
+                background: none;
+                padding: none;
+            }
+
+        }
+
+    }
+
+    & .container {
+        width: calc(100% - 200px);
+        overflow-y:auto ;
+        height: 100%;
+        padding: 20px;
+        & .center-div{
+            width: 100%;
+            height:100%;
+            display: grid;
+            place-items: center;
+            overflow-y:auto ;
+            & form{
+                margin: 0;
+                box-shadow: none;
+                & label{
+                    height: 150px;
+                    width: 150px;
+                    border-radius: 50%;
+                    border: 1px solid #fbb40c;
+                    margin: 20px auto;
+                    display: block;
+                    & img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                & .file-input{
+                    display: none;
+                }
+                
+            }
+            & .div-flex{
+                display: flex;
+                flex-wrap: wrap;
+               ;
+            }
+            & .card{
+             width: 250px;
+             height: 250px;
+             & .place-card__name{
+                 margin: 5px;
+                 font-size: .9rem;
+                }
+                & .place-card__author{
+                    display: none;
+                    
+                }
+                & .postedon{
+                 font-size: .8rem;
+
+             }
+             &:hover .place-card__content{
+                height: 100%;
+                padding-top: 70px;
+                background: rgba(255,255,255,.8);
+                backdrop-filter: blur(5px);
+                border: 1px solid #fbb40c;
+             }
+            }
+             & .instruction{
+                 background: #fff;
+                 position: absolute;
+                 overflow-y: auto;
+                 top:0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                display: none;
+                place-items: center;
+                backdrop-filter: blur(10px);
+                border-radius: 8px;
+                box-shadow: 4px 4px 10px rgba(0, 0, 0, .08) , 0 0 4px rgba(0, 0, 0, .2);
+               
+                & ol{
+                    padding: 10px ;
+                    margin: 0 20px 0;
+                    & h5{
+                        text-align: center;
+                        color: #fbb40c;
+                        font-weight: 600;
+                    }
+                    & .closebutton{
+                        position: absolute;
+                        top: 20px;
+                        right: 20px;
+                        color: red;
+                        cursor: pointer;
+                    }
+                    & li{
+                        margin: 10px 0;
+                        padding: 5px;
+                        font-size: .9rem;
+                        font-weight: 500;
+                        list-style: decimal;
+                    }
+                    & input{
+                        width: 100%;
+                    }
+                }
+        
+            }
+            
+        }
+    }
+
+}
+.center-div .div-flex .card-section .card{
+    background: crimson !important;
+}
+.center-div .modal-open{
+    display: grid !important;
+}
+.center-div::-webkit-scrollbar{
+    display: none;
+}
+@media(max-width:768px){
+    .main{
+        flex-direction: column;
+        box-shadow: none;
+        height: auto;
+        width: 100%;
+        & .navbar{
+            width: 100%;
+        }
+        & .container{
+            width: 100%;
+        }
+    }
+}

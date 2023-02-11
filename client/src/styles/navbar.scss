@@ -1,0 +1,86 @@
+header{
+    position: relative;
+    padding: 20px;
+    top: 0;
+    height: 80px;
+    background:#fff;
+    box-shadow: 2px 2px 4px rbaa(0,0,0,.05);
+    z-index: 2;
+    font-size: 1.2rem;
+& span{
+    display: none;
+}
+    z-index: 2;
+
+
+        & .header{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 90%;
+            margin: 0 auto;
+            & .logo{
+                color: #fbbc04;
+                font-size: 2rem;
+                font-weight: 700;
+            }
+        & .menus{
+            display: flex;
+            align-items: center;
+            list-style: none;
+        
+            & a , & .a{
+                margin: 0 10px;
+                text-decoration: none ;
+                cursor: pointer;
+                color: #666;
+                & :hover{
+                    color: #fbb40c;
+                }
+                & .login-button{
+                  background: #ccc;
+                  color: #555;
+                  padding: 8px 20px;
+                  transition: .2s;
+                  border-radius: 5px;
+                }
+                & .login-button:hover{
+                   background: #ddd;
+               }
+            }
+        }
+    }
+}
+@media(max-width : 768px){
+    header .header .menus{
+        display: none;
+    }
+    header .menu-open{
+        display: flex !important;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: white;
+        width : 100vw;
+        height: 100vh;
+        padding: 25px 20px;
+       flex-direction: column;
+       text-align: left;
+       & a{
+           display: block;
+           width: 100%;
+           margin: 20px;
+           padding: 20px 25px;
+       }
+       & .login-button{
+           text-align: center;
+       }
+       
+    }
+    header span{
+        display: block;
+        cursor: pointer;
+        z-index: 2;
+    }
+  
+}

@@ -1,0 +1,19 @@
+footer{
+    position: sticky;
+    top: 100%;
+    bottom: 0;
+    padding: 0 0 15px;
+    text-align: center;
+    background: #555;
+    & p{
+        color: #444;
+        margin: 10px 0;
+        background: #fbb40c;
+        padding: 15px 0;
+    }
+    & a{
+        text-decoration: none;
+        color: #fbb40c;
+      
+    }
+}
